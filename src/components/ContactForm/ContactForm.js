@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
 import shortId from 'shortid';
+import PropTypes from 'prop-types';
 
 class ContactForm extends Component {
+    static propTypes = {
+        onSubmit: PropTypes.func.isRequired,
+        existingNames: PropTypes.arrayOf(PropTypes.string).isRequired,
+    };
     state = {
         name: '',
         id: '',

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const ContactList = ({ passArray, onRemove }) => {
     return (
@@ -20,4 +21,10 @@ const ContactList = ({ passArray, onRemove }) => {
         </>
     );
 };
+
+ContactList.propTypes = {
+    passArray: PropTypes.array.isRequired,
+    onRemove: PropTypes.func.isRequired,
+};
+
 export default ContactList;

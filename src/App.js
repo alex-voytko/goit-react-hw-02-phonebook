@@ -4,24 +4,14 @@ import Container from './components/Container';
 import ContactForm from './components/ContactForm';
 import Filter from './components/Filter';
 import ContactList from './components/ContactList';
-import PropTypes from 'prop-types';
 import './styles/main.scss';
 
 class App extends Component {
-    static propTypes = {
-        onSubmit: PropTypes.object.isRequired,
-        existingNames: PropTypes.arrayOf(PropTypes.string).isRequired,
-        className: PropTypes.string.isRequired,
-        title: PropTypes.string.isRequired,
-        value: PropTypes.string.isRequired,
-        onChange: PropTypes.func.isRequired,
-        passArray: PropTypes.arrayOf(PropTypes.string).isRequired,
-        onRemove: PropTypes.func.isRequired,
-    };
     state = {
         contacts: initialContacts,
         filter: '',
     };
+
     addContact = ({ name, id, number }) => {
         const newContact = {
             name,
